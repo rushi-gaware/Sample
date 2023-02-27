@@ -1,0 +1,260 @@
+Q1. Take out 5 by using slicing.
+L = [1,2,[3,4,5,6]]
+
+Ans = print(L[2][2])
+
+Q2. Take out 22 by using slicing.
+li = [1,2,3,4,[44,45,46,[11,22,33]]]
+
+Ans = print(li[4][3][1])
+
+
+Q3.  Print from word 'INSTAGRAM' word 'G' with and its index value
+
+s = 'INSTAGRAM'
+r = range(len(s))
+
+for i in r:
+    if s[i] == 'G':
+        print(s[i],i)
+
+Q4. How many times 's' is repeated in 'rushikesh'?
+
+s = 'Rushikesh'
+l = len(s)
+r = range (l)
+count = 0
+
+for i in r:
+    if s[i] == 's':
+        count += 1
+
+print(count)
+
+Q5. Print a table of given number
+
+num = int(input("Enter the number : "))
+r = range(1,11,1)
+for i in r:
+    print(i ,'*' ,num, '=', i*num )
+
+Q6. Find even-odd number from 1 to 200.
+
+r = range(1,201,1)
+for i in r:
+    if i % 2 == 0:
+        print(i, 'This number is even')
+    else:
+        print(i, 'This number is odd')
+
+
+Q7. Print the list in ascending order :
+
+# 1. Method 1 -
+
+l = [10,23,435,75,234,34,1,5,84,67,4]
+
+l.sort()
+print(l)
+
+# 2. Method 2 -
+
+for i in range(len(l)) :
+    min_value = min(l[i:])
+    min_index = l.index(min_value)
+    l[i],l[min_index] = l[min_index],l[i]
+    
+print(l)
+
+Q8. Print the list in descending order
+
+lis = [10,55,88,66,44,9,44,994,88,494,54]
+
+for i in range(len(lis)) :
+    max_val = max(lis[i:])
+    max_ind = lis.index(max_val)
+    lis[i],lis[max_ind] = lis[max_ind],lis[i]
+    
+print(lis)
+
+Q9. # Q. Arrange in ascending
+
+l = [11,44,3,2,77]
+
+for i in range(len(l)):
+    min_val = l[i]
+    for j in range (i+1,len(l)) :
+        if min_val > l[j] :
+            min_val = l[j]
+    min_index = l.index(min_val)
+    l[i],l[min_index] = l[min_index], l[i]
+        
+
+print(l)
+
+Q10. Print this output print(print(print("Good Morning)))
+
+
+
+Q11. Arrange String in ascending
+
+a = ('instagram')
+
+print(sorted(a))
+
+
+
+Q12. Interchange value
+
+# Method 1
+
+a = 10
+b = 20
+
+temp = a
+a = b
+b = temp
+
+print(a,b)
+
+# Method 2
+
+p = 10
+q = 20
+
+p,q = q,p
+
+print(p,q)
+
+# Method 3
+
+x = 10
+y = 20
+
+x = x + y
+y = x - y
+x = x - y
+
+print (x,y)
+
+Q.13. Find factorial?
+
+num = eval(input("Enter the number : "))
+
+result = 1
+
+for i in range (num,0,-1) :
+    result = result * i
+    
+print(result)
+
+Q14. Print how many numbers are there in tuple ?
+
+a = (234,2465,356,56,254)
+
+count = 0
+for i in range(len(a)) :
+    count += 1
+
+print(count)
+
+Q15. WAP to print a list of word which starts with letter 'p'?
+
+l = ['rakesh','pratik','rahul','pavan','pranay']
+
+def let ():
+    for i in l :
+        if i[0] == 'p':
+            print(i)
+            
+a = let ()
+
+Q16. WAP of Fibonacci ?
+
+
+Q17.Define a function to check the given words are anagrams or not
+
+#examples
+# i). race - care
+# ii). part - trap
+# iii). heart - earth
+# iv). knee - keen
+
+def anagrams (a1,a2) :
+        if sorted(a1) == sorted(a2):
+            print('\n\n'"The String is Anagrms")
+        else :
+            print('\n\n'"THe word is not an Anagram")
+            
+
+a1 = input ("Enter the 1st word : ")
+a2 = input ("Enter the seconf word : ")
+
+anagrams (a1,a2)
+
+Q18. Reverse this ?
+
+s = "Rushi Gaware"
+
+print(s[4::-1] , s[11:5:-1])
+
+
+
+Q19. Find if the number is Armstrong
+
+a = 407
+num = str(a)
+n = len(num)
+
+sum = 0
+
+for i in num :
+    sum += int(i)**n
+    
+if a == sum :
+    print("yes, it is Armstrong Number")
+    
+else :
+    print("no, it is Armstrong Number")
+
+Q20. What is __init__ ?
+
+It is a constructor. It helps to initiliase (give value) the instance variable.
+
+Q21. What is memory allocation and dealocation?
+
+Q22. What is garbage collector?
+
+Q23. How is momory stored in python?
+
+Q24. What is amsrong number ?
+
+Q25. How to find length of a integer or number ?
+
+Q26. What is type casting ?
+
+Q27. What is list comprehension ?
+
+x = [i for i in range (1,26) if i%2 == 1 ]
+
+print(x)
+
+l1 = [4,5,6,7]
+
+Q28. What is module, how to import module?
+
+Q29. Write a program to add first 20 even numbers to add in a list using list comprehension
+
+num = eval(input("Enter the number : "))
+total = 0
+l_even = [total + i for i in range(1,num+1) if i%2 == 0]
+print(l_even)
+
+Q30. Print Output as p ,yy ,ttt, hhhh, ooooo, nnnnnn
+s = "python"
+c = 1
+
+for i in s :
+    print(i*c)
+    c += 1
+    
